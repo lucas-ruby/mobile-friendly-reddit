@@ -8,12 +8,22 @@
     "name": "Lucas Ruby",
     "url": "https://github.com/lucas-ruby/mobile-friendly-reddit"
   },
+
+  "icons": {
+    "32": "icons/icon.svg",
+    "48": "icons/icon.svg",
+    "64": "icons/icon.svg",
+    "96": "icons/icon.svg",
+    "128": "icons/icon.svg",
+    "256": "icons/icon.svg"
+  },
+
   "applications": {
     "gecko": {
       "id": "mobile-friendly-reddit@lucas-ruby"
     }
   },
-  
+
   "permissions": [
     "*://*.reddit.com/*",
     "*://*.redditmedia.com/*",
