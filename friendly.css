@@ -1,0 +1,10 @@
+body.scroll-disabled:not(.actually) {
+	height: initial;
+	overflow: initial;
+	position: initial;
+	width: initial;
+}
+
+*[class*="XPromo"], *[class*="xPromo"]{
+	display: none;
+}
