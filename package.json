@@ -1,0 +1,46 @@
+{
+  "name": "mobile-friendly-reddit",
+  "version": "1.0.0",
+  "description": "Disables anti-features from Reddit's mobile site",
+  "main": "index.js",
+  "repository": "https://github.com/lucas-ruby/mobile-friendly-reddit.git",
+  "author": "Lucas Ruby",
+  "scripts": {
+    "run": "web-ext run",
+    "build": "web-ext build",
+    "lint": "web-ext lint"
+  },
+  "webExt": {
+    "sourceDir": "src",
+    "artifactsDir": "builds",
+    "ignoreFiles": [
+      "*.git*",
+      "**/*.log",
+      "yarn.lock",
+      "package-lock.json",
+      ".env"
+    ],
+    "run": {
+      "firefoxProfile": "mobile-friendly-reddit",
+      "keepProfileChanges": true,
+      "startUrl": ["https://www.reddit.com"],
+      "pref": [
+        "general.useragent.override.reddit.com=Mozilla/5.0 (Android 9; Mobile; rv:67.0.3) Gecko/67.0.3 Firefox/67.0.3",
+        "extensions.update.enabled=false"
+      ]
+    },
+    "build": {
+      "overwriteDest": true
+    },
+    "lint": {
+      "output": "json",
+      "warningsAsErrors": true,
+      "pretty": true
+    },
+    "sign": {
+      "channel": "listed"
+    }
+  },
+  "license": "MIT",
+  "private": false
+}

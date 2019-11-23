@@ -1,6 +1,6 @@
 {
 
-  "description": "Disables anti-features from Reddit's mobile site.",
+  "description": "Disables anti-features from Reddit's mobile site",
   "manifest_version": 2,
   "name": "mobile-friendly-reddit",
   "version": "1.0",
@@ -12,11 +12,6 @@
     "gecko": {
       "id": "mobile-friendly-reddit@lucas-ruby"
     }
-  },
-
-  "page_action": {
-    "default_icon": "icons/off.svg",
-    "browser_style": true
   },
   
   "permissions": [
