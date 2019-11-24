@@ -8,7 +8,26 @@
   "scripts": {
     "run": "web-ext run",
     "build": "web-ext build",
-    "lint": "web-ext lint"
+    "lint": "web-ext lint",
+    "release": "release-it"
+  },
+  "npm": {
+    "publish": false
+  },
+  "release-it": {
+    "npm": {
+      "publish": false
+    },
+    "git": {
+      "tagName": "v${version}"
+    },
+    "github": {
+      "release": true,
+      "draft": true
+    },
+    "hooks": {
+      "before:init": ["yarn", "yarn web-ext lint"]
+    }
   },
   "webExt": {
     "sourceDir": "src",
@@ -23,7 +42,9 @@
     "run": {
       "firefoxProfile": "mobile-friendly-reddit",
       "keepProfileChanges": true,
-      "startUrl": ["https://www.reddit.com"],
+      "startUrl": [
+        "https://www.reddit.com"
+      ],
       "pref": [
         "general.useragent.override.reddit.com=Mozilla/5.0 (Android 9; Mobile; rv:67.0.3) Gecko/67.0.3 Firefox/67.0.3",
         "extensions.update.enabled=false"
@@ -42,5 +63,9 @@
     }
   },
   "license": "MIT",
-  "private": false
+  "private": false,
+  "devDependencies": {
+    "release-it": "^12.4.3",
+    "web-ext": "^3.2.1"
+  }
 }
