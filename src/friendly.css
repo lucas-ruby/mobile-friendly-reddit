@@ -8,3 +8,44 @@ body.scroll-disabled:not(.actually) {
 *[class*="XPromo"], *[class*="xPromo"]{
 	display: none;
 }
+
+.EUCookieNotice {
+	display: none;
+}
+
+body.no-avatars .CommentHeader__col2 {
+	padding-left: 0;
+}
+
+body.no-avatars .CommentHeader__avatar {
+	display: none;
+}
+
+body.no-avatars .Comment__body {
+	padding-left: 16px;
+}
+
+body.no-avatars .Comment__toolsContainer.clearfix {
+	padding-left: 16px;
+}
+
+body.show-all .CommentTree__tree {
+	max-height: none;
+}
+
+body.show-all .CommentTree__tree.m-listing-below {
+	overflow: unset;
+	position: unset;
+}
+
+body.show-all .CommentTree__SeeFullBtn {
+	display: none;
+}
+
+body.show-all .CommentTree__tree.m-listing-below::after {
+	background: none;
+}
+
+body.easy-select .CommentHeader:hover:active:focus {
+	cursor: pointer;
+}
