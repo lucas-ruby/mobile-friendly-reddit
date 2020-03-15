@@ -25,11 +25,17 @@
   },
 
   "permissions": [
+    "storage",
     "*://*.reddit.com/*",
     "*://*.redditmedia.com/*",
     "*://*.redd.it/*",
     "*://*.redditstatic.com/*"
   ],
+
+  "options_ui": {
+    "page": "preferences.html",
+    "browser_style": true
+  },
 
   "content_scripts": [
     {

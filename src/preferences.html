@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Preferences - Mobile Friendly Reddit</title>
+        <script type="module" src="./preferences.js"></script>
+        <style>
+            .list-unstyled {
+                list-style: none;
+            }
+        </style>
+    </head>
+
+<body class="mobile-friendly-reddit options-page">
+    <form class="preferences" name="preferences">
+        <ul class="list-unstyled">
+            <li class="option-item browser-style">
+                <input class="option" type="checkbox" name="showAll" id="opt-showAll" disabled>
+                <label for="showAll">Show all comments on page load</label>
+            </li>
+            <li class="option-item browser-style">
+                <input class="option" type="checkbox" name="noAvatars" id="opt-noAvatars" disabled>
+                <label for="noAvatars">Don't show user avatars in comment page</label>
+            </li>
+            <li class="option-item browser-style">
+                <input class="option" type="checkbox" name="easySelect" id="opt-easySelect" disabled>
+                <label for="easySelect">Change cursor style and highlight comment header when touching (for collapsing)</label>
+            </li>
+        </ul>
+    </form>
+</body>
+
+</html>
