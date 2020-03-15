@@ -6,9 +6,10 @@
   "repository": "https://github.com/lucas-ruby/mobile-friendly-reddit.git",
   "author": "Lucas Ruby",
   "scripts": {
-    "run": "web-ext run",
+    "start": "web-ext run",
     "build": "web-ext build",
     "lint": "web-ext lint",
+    "mkprofile": "firefox --no-remote -CreateProfile \"mobile_friendly_reddit $INIT_CWD/profiles/mobile_friendly_reddit\"",
     "release": "release-it"
   },
   "npm": {
@@ -26,7 +27,10 @@
       "draft": true
     },
     "hooks": {
-      "before:init": ["yarn", "yarn web-ext lint"]
+      "before:init": [
+        "yarn",
+        "yarn web-ext lint"
+      ]
     }
   },
   "webExt": {
@@ -40,13 +44,13 @@
       ".env"
     ],
     "run": {
-      "firefoxProfile": "mobile-friendly-reddit",
+      "firefoxProfile": "profiles/mobile_friendly_reddit",
       "keepProfileChanges": true,
       "startUrl": [
         "https://www.reddit.com"
       ],
       "pref": [
-        "general.useragent.override.reddit.com=Mozilla/5.0 (Android 9; Mobile; rv:67.0.3) Gecko/67.0.3 Firefox/67.0.3",
+        "general.useragent.override=Mozilla/5.0 (Android 9; Mobile; rv:67.0.3) Gecko/67.0.3 Firefox/67.0.3",
         "extensions.update.enabled=false"
       ]
     },
@@ -66,6 +70,6 @@
   "private": false,
   "devDependencies": {
     "release-it": "^12.4.3",
-    "web-ext": "^3.2.1"
+    "web-ext": "^4.1.0"
   }
 }
